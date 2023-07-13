@@ -2,11 +2,15 @@ import { component$ } from "@builder.io/qwik";
 import styles from "./hero.module.css";
 import ImgThunder from "~/media/thunder.png?jsx";
 
-function randomInRange(min: number, max: number) {
+function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
 export default component$(() => {
+  const duration = 15 * 1000;
+  const animationEnd = Date.now() + duration;
+  const skew = 1;
+
   return (
     <div class={["container", styles.hero]}>
       <ImgThunder class={styles["hero-image"]} />
@@ -19,9 +23,18 @@ export default component$(() => {
       <div class={styles["button-group"]}>
         <button
           onClick$={async () => {
-            const duration = 15 * 1000;
-            const animationEnd = Date.now() + duration;
-            let skew = 1;
+            const defaults = {
+              spread: 360,
+              ticks: 70,
+              gravity: 0,
+              decay: 0.95,
+              startVelocity: 30,
+              colors: ["006ce9", "ac7ff4", "18b6f6", "713fc2", "ffffff"],
+              origin: {
+                x: 0.5,
+                y: 0.35,
+              },
+            };
 
             function loadConfetti() {
               return new Promise<(opts: any) => void>((resolve, reject) => {
@@ -41,11 +54,10 @@ export default component$(() => {
 
             const confetti = await loadConfetti();
 
-            function snow() {
+            function shoot() {
               const timeLeft = animationEnd - Date.now();
               const ticks = Math.max(200, 500 * (timeLeft / duration));
               skew = Math.max(0.8, skew - 0.001);
-
               confetti({
                 particleCount: 1,
                 startVelocity: 0,
@@ -62,12 +74,18 @@ export default component$(() => {
                 drift: randomInRange(-0.4, 0.4),
               });
 
-              if (timeLeft > 0) {
-                requestAnimationFrame(snow);
-              }
+              confetti({
+                ...defaults,
+                particleCount: 60,
+                scalar: 0.75,
+              });
             }
 
-            setTimeout(snow, 0);
+            setTimeout(shoot, 0);
+            setTimeout(shoot, 100);
+            setTimeout(shoot, 200);
+            setTimeout(shoot, 300);
+            setTimeout(shoot, 400);
           }}
         >
           Time to celebrate

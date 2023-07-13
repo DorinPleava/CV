@@ -45,3 +45,8 @@ lerna-debug.log*
 !/azure-functions/host.json
 
 .env
+
+# Vercel
+.vercel
+
+.vercel
