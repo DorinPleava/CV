@@ -93,7 +93,7 @@ export default component$(() => {
         <a
           href="https://qwik.builder.io/docs"
           target="_blank"
-          class="button button-dark"
+          // class="button button-dark"
         >
           Explore the docs
         </a>
