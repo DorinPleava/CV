@@ -4,6 +4,7 @@ import type { RequestHandler } from "@builder.io/qwik-city";
 
 import Header from "~/components/starter/header/header";
 import Footer from "~/components/starter/footer/footer";
+import { CustomCursor } from "~/components/custom-cursor/custom-cursor";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -24,13 +25,15 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   return (
-    <div class="bg-[#110111]">
-      {/* <div class="border-4 border-white border-opacity-25 ">asdasds</div> */}
+    <div class="bg-[#110111] min-h-screen cursor-none">
       <Header />
       <main>
-        <Slot />
+        <CustomCursor />
+        {/* <Slot /> */}
+        <div class="cursor-dot-outline"></div>
+        <div class="cursor-dot"></div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 });
