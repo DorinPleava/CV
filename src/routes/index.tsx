@@ -6,6 +6,7 @@ import Infobox from "~/components/starter/infobox/infobox";
 import Starter from "~/components/starter/next-steps/next-steps";
 
 export default component$(() => {
+
   return (
     <>
       <Hero />

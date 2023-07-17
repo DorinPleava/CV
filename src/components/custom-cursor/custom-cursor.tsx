@@ -9,6 +9,8 @@ export const CustomCursor = component$(() => {
   const cursorVisible = useSignal(true);
   const cursorEnlarged = useSignal(false);
 
+  const codeCursor = useSignal(false);
+
   const endX = useSignal(100);
   const endY = useSignal(100);
   const _x = useSignal(0);
@@ -23,6 +25,40 @@ export const CustomCursor = component$(() => {
     } else {
       dot.value && (dot.value.style.opacity = "1");
       dotOutline.value && (dotOutline.value.style.opacity = "1");
+    }
+  });
+
+  const toggleCursorCodeView = $(() => {
+    if (codeCursor.value) {
+      if (dot.value) {
+        dot.value.style.opacity = "0";
+      }
+
+      if (dotOutline.value) {
+        dotOutline.value.style.transform = `translate(-50%, -50%) scale(3.5)`;
+        dotOutline.value.style.backgroundColor = "rgba(255,0,0,0.2)";
+        dotOutline.value.style.transition = "all 0.2s ease-in-out";
+        // remove animation after 0.2s
+        setTimeout(() => {
+          dotOutline.value!.style.transition = "none";
+        }, 200);
+      }
+    } else {
+      if (dot.value) {
+        dot.value.style.opacity = "1";
+      }
+
+      if (dotOutline.value) {
+        dotOutline.value.style.transform = `translate(-50%, -50%) scale(1)`;
+        dotOutline.value.style.backgroundColor = "rgba(255,255,255,0.5)";
+        dotOutline.value.style.opacity = "1";
+        dotOutline.value.style.transition = "all 0.2s ease-in-out";
+
+        // sleep for 0.2s to finish animation
+        setTimeout(() => {
+          dotOutline.value!.style.transition = "none";
+        }, 200);
+      }
     }
   });
 
@@ -88,12 +124,35 @@ export const CustomCursor = component$(() => {
       requestRef.value = requestAnimationFrame(animateDotOutline);
     })();
 
+    document.addEventListener("keydown", vDown);
+    function vDown(e: KeyboardEvent) {
+      if (e.repeat || e.key !== "v") {
+        return;
+      }
+      console.log("code View on", e);
+      codeCursor.value = true;
+      toggleCursorCodeView();
+    }
+
+    document.addEventListener("keyup", vUp);
+    function vUp(e: KeyboardEvent) {
+      if (e.repeat || e.key !== "v") {
+        return;
+      }
+      // alert("key pressed");
+      console.log("code View off", e);
+      codeCursor.value = false;
+      toggleCursorCodeView();
+    }
+
     return () => {
       document.removeEventListener("mousedown", mouseOverEvent);
       document.removeEventListener("mouseup", mouseOutEvent);
       document.removeEventListener("mousemove", mouseMoveEvent);
       document.removeEventListener("mouseenter", mouseEnterEvent);
       document.removeEventListener("mouseleave", mouseLeaveEvent);
+
+      document.removeEventListener("keypress", vUp);
 
       cancelAnimationFrame(requestRef.value!);
     };
