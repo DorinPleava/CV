@@ -1,5 +1,4 @@
 import { component$ } from "@builder.io/qwik";
-import styles from "./hero.module.css";
 import ImgThunder from "~/media/thunder.png?jsx";
 
 function randomInRange(min: number, max: number) {
@@ -8,15 +7,10 @@ function randomInRange(min: number, max: number) {
 
 export default component$(() => {
   return (
-    <div class={["container", styles.hero]}>
-      <ImgThunder class={styles["hero-image"]} />
-      <h1>
-        So <span class="highlight">fantastic</span>
-        <br />
-        to have <span class="highlight">you</span> here
-      </h1>
-      <p>Have fun building your App with Qwik.</p>
-      <div class={styles["button-group"]}>
+    <div class="flex-col flex align-middle flex-nowrap items-center h-96 justify-center gap-10">
+      <ImgThunder class="w-full absolute h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
+      <p class="text-2xl text-white font-extrabold" >Welcome to my CV experience</p>
+      <div class="flex-row gap-6">
         <button
           onClick$={async () => {
             const duration = 15 * 1000;

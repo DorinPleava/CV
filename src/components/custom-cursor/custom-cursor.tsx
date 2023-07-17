@@ -103,11 +103,11 @@ export const CustomCursor = component$(() => {
     <>
       <div
         ref={dotOutline}
-        class="w-10 h-10 bg-[rgba(255,255,255,0.5)] pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-15 transition-opacity duration-150 ease-in-out z-50"
+        class="w-10 h-10 bg-[rgba(255,255,255,0.5)] pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 transition-opacity duration-150 ease-in-out z-50"
       ></div>
       <div
         ref={dot}
-        class="w-[10px] h-[10px] bg-white pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 rounded-full opacity-15 transition-opacity duration-150 ease-in-out z-50"
+        class="w-[10px] h-[10px] bg-white pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 rounded-full opacity-20 transition-opacity duration-150 ease-in-out z-50"
       ></div>
     </>
   );

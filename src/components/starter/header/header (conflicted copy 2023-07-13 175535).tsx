@@ -1,15 +1,9 @@
 import { component$ } from "@builder.io/qwik";
-import { QwikLogo } from "../icons/qwik";
 
 export default component$(() => {
   return (
     <header class="fixed p-4 md:p-8 left-[50%] -translate-x-2/4 bg-[rgba(3,0,20,.08)] w-[100vw]">
       <div class="flex">
-        {/* <div >
-          <a href="/" title="qwik">
-            <QwikLogo height={50} width={143} />
-          </a>
-        </div> */}
         <ul class="flex gap-8 border border-white border-opacity-10 px-5 py-2 rounded-full bg-[rgba(255,255,255,0.05)]">
           <li class="text-slate-200 hover:text-slate-400">
             <a

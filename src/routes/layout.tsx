@@ -25,15 +25,15 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   return (
-    <div class="bg-[#110111] min-h-screen cursor-none">
+    <div class="min-h-screen cursor-none">
       <Header />
       <main>
         <CustomCursor />
-        {/* <Slot /> */}
+        <Slot />
         <div class="cursor-dot-outline"></div>
         <div class="cursor-dot"></div>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 });
