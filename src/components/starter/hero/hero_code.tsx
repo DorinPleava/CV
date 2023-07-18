@@ -12,8 +12,8 @@ export default component$(() => {
       <div>
 
       </div>
-      <p class="text-2xl text-white font-extrabold">
-        Welcome to AAAAAAA
+      <p class="text-2xl text-red font-extrabold">
+        Welcome to real deal
       </p>
       <div class="flex-row gap-6">
         <button

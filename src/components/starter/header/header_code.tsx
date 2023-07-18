@@ -1,20 +1,20 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$ } from "@builder.io/qwik";
 
 export default component$(() => {
-  // const loadGsapCDN = $(() => {
-  //   return new Promise<(opts: any) => void>((resolve, reject) => {
-  //     if ((globalThis as any).gsap) {
-  //       return resolve((globalThis as any).gsap as any);
-  //     }
-  //     const script = document.createElement("script");
-  //     script.src =
-  //       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
-  //     script.onload = () => resolve((globalThis as any).gsap as any);
-  //     script.onerror = reject;
-  //     document.head.appendChild(script);
-  //     script.remove();
-  //   });
-  // });
+  const loadGsapCDN = $(() => {
+    return new Promise<any>((resolve, reject) => {
+      if ((globalThis as any).gsap) {
+        return resolve((globalThis as any).gsap as any);
+      }
+      const script = document.createElement("script");
+      script.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
+      script.onload = () => resolve((globalThis as any).gsap as any);
+      script.onerror = reject;
+      document.head.appendChild(script);
+      script.remove();
+    });
+  });
 
   return (
     // <header class="fixed top-0 left-0 py-3 bg-[rgba(3,0,20,.08)] w-[100vw] z-10 backdrop-filter backdrop-blur-lg cursor-[url(../public/n1.cur),_pointer]">
@@ -26,12 +26,12 @@ export default component$(() => {
             <a
               preventdefault:click
               href="#connected"
-              // onClick$={async () => {
-              //   const gsap = await loadGsapCDN();
-              //   console.log("gsap", gsap);
-              //   // gsap.to(window, { duration: 1, scrollTo: "#connected" });
-              //   gsap.to("#about", { rotation: "+=360" });
-              // }}
+              onClick$={async () => {
+                const gsap = await loadGsapCDN();
+                console.log("gsap", gsap);
+                // gsap.to(window, { duration: 1, scrollTo: "#connected" });
+                gsap.to("#about", { rotation: "+=360" });
+              }}
             >
               About
             </a>
