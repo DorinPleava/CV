@@ -2,12 +2,12 @@ import { $, component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 
-import Header from "~/components/starter/header/header";
-import Footer from "~/components/starter/footer/footer";
-import Hero from "~/components/starter/hero/hero";
-import Hero_code from "~/components/starter/hero/hero_code";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import About from "~/components/about/about";
+import About_hidden from "~/components/about/about_hidden";
+import Footer from "~/components/footer/footer";
+import Header from "~/components/header/header";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -94,10 +94,12 @@ export default component$(() => {
     console.log("code View on", e);
 
     aboutHiddenRef.value &&
-      (aboutHiddenRef.value.style.clipPath = "circle(100px at var(--x) var(--y))");
+      (aboutHiddenRef.value.style.clipPath =
+        "circle(100px at var(--x) var(--y))");
 
     aboutHiddenRef.value && (aboutHiddenRef.value.style.visibility = "visible");
-    aboutHiddenRef.value && (aboutHiddenRef.value.style.animation = "clip 1s linear");
+    aboutHiddenRef.value &&
+      (aboutHiddenRef.value.style.animation = "clip 1s linear");
   });
 
   const disableCodeViewMouse = $(async (e: KeyboardEvent) => {
@@ -107,7 +109,8 @@ export default component$(() => {
     console.log("code View off", e);
 
     aboutHiddenRef.value &&
-      (aboutHiddenRef.value.style.clipPath = "circle(0px at var(--x) var(--y))");
+      (aboutHiddenRef.value.style.clipPath =
+        "circle(0px at var(--x) var(--y))");
   });
 
   useVisibleTask$(() => {
@@ -151,7 +154,7 @@ export default component$(() => {
       <Header />
       <section id="about">
         <section id="about_main">
-          <Hero />
+          <About />
           <div class="features">
             <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone">
               <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft opacity-0 hidden will-change-transform">
@@ -277,12 +280,12 @@ export default component$(() => {
           id="aboutHiddenRef"
           class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out"
         >
-          <Hero_code />
+          <About_hidden />
         </section>
       </section>
       <section id="projects">
         <section id="projects_main">
-        <div class="features">
+          <div class="features">
             <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone">
               <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft opacity-0 hidden will-change-transform">
                 <div class="card">
@@ -406,12 +409,11 @@ export default component$(() => {
           ref={projectsHiddenRef}
           id="projectsHiddenRef"
           class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out"
-        >
-        </section>
+        ></section>
       </section>
       <section id="experience">
         <section id="projects_main">
-        <div class="features">
+          <div class="features">
             <div class="feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone">
               <div class="featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft opacity-0 hidden will-change-transform">
                 <div class="card">
@@ -535,8 +537,7 @@ export default component$(() => {
           ref={projectsHiddenRef}
           id="projectsHiddenRef"
           class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out"
-        >
-        </section>
+        ></section>
       </section>
       <Footer />
     </div>

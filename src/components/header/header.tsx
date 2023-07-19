@@ -1,23 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
-  // const loadGsapCDN = $(() => {
-  //   return new Promise<(opts: any) => void>((resolve, reject) => {
-  //     if ((globalThis as any).gsap) {
-  //       return resolve((globalThis as any).gsap as any);
-  //     }
-  //     const script = document.createElement("script");
-  //     script.src =
-  //       "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
-  //     script.onload = () => resolve((globalThis as any).gsap as any);
-  //     script.onerror = reject;
-  //     document.head.appendChild(script);
-  //     script.remove();
-  //   });
-  // });
-
   return (
-    // <header class="fixed top-0 left-0 py-3 bg-[rgba(3,0,20,.08)] w-[100vw] z-10 backdrop-filter backdrop-blur-lg cursor-[url(../public/n1.cur),_pointer]">
     <header class="fixed top-0 left-0 py-3 bg-[rgba(3,0,20,.08)] w-[100vw] z-10 backdrop-filter backdrop-blur-lg">
       <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,.12)] to-transparent"></div>
       <div class="flex items-center justify-between p-7 relative">

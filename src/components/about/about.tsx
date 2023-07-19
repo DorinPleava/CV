@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-// import ImgThunder from "~/media/thunder.png?jsx";
+import ImgThunder from "~/media/thunder.png?jsx";
 
 function randomInRange(min: number, max: number) {
   return Math.random() * (max - min) + min;
@@ -8,7 +8,7 @@ function randomInRange(min: number, max: number) {
 export default component$(() => {
   return (
     <div class="flex-col flex align-middle flex-nowrap items-center h-96 justify-center gap-10">
-      {/* <ImgThunder class="w-full absolute h-auto object-cover -z-[1] opacity-20 pointer-events-none" /> */}
+      <ImgThunder class="w-full absolute h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
       <div>
 
       </div>
