@@ -22,35 +22,14 @@ export default component$(() => {
       <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,.12)] to-transparent"></div>
       <div class="flex items-center justify-between p-7 relative">
         <ul class="flex absolute gap-8 border left-1/2 -translate-x-1/2 border-white border-opacity-10 px-5 py-2 rounded-full bg-[rgba(255,255,255,0.05)]">
-          <li id="about" class="text-slate-200 hover:text-slate-400">
-            <a
-              preventdefault:click
-              href="#connected"
-              // onClick$={async () => {
-              //   const gsap = await loadGsapCDN();
-              //   console.log("gsap", gsap);
-              //   // gsap.to(window, { duration: 1, scrollTo: "#connected" });
-              //   gsap.to("#about", { rotation: "+=360" });
-              // }}
-            >
-              About
-            </a>
+          <li class="text-slate-200 hover:text-slate-400">
+            <a href="#about">About</a>
           </li>
           <li class="text-slate-200 hover:text-slate-400">
-            <a
-              href="https://qwik.builder.io/docs/components/overview/"
-              target="_blank"
-            >
-              Projects
-            </a>
+            <a href="#projects">Projects</a>
           </li>
           <li class="text-slate-200 hover:text-slate-400">
-            <a
-              href="https://qwik.builder.io/examples/introduction/hello-world/"
-              target="_blank"
-            >
-              Experience
-            </a>
+            <a href="#experience">Experience</a>
           </li>
           <li class="text-slate-200 hover:text-slate-400">
             <a

@@ -17,7 +17,6 @@ export default component$(() => {
   });
 
   return (
-    // <header class="fixed top-0 left-0 py-3 bg-[rgba(3,0,20,.08)] w-[100vw] z-10 backdrop-filter backdrop-blur-lg cursor-[url(../public/n1.cur),_pointer]">
     <header class="fixed top-0 left-0 py-3 bg-[rgba(3,0,20,.08)] w-[100vw] z-10 backdrop-filter backdrop-blur-lg">
       <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,.12)] to-transparent"></div>
       <div class="flex items-center justify-between p-7 relative">
@@ -29,7 +28,6 @@ export default component$(() => {
               onClick$={async () => {
                 const gsap = await loadGsapCDN();
                 console.log("gsap", gsap);
-                // gsap.to(window, { duration: 1, scrollTo: "#connected" });
                 gsap.to("#about", { rotation: "+=360" });
               }}
             >
