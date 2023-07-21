@@ -144,29 +144,31 @@ export default component$(() => {
     // <div class="min-h-screen h-[100vh] box-border">
     <div class="">
       <Header />
-      <section id="front_layer" class="h-[2000px]">
-        <section id="about_main">
+      <section id="front_layer" class="mt-48">
+        <section id="about">
           <About />
         </section>
-        <section id="projects_main">
+        <section id="projects">
           <div>Hello Projects</div>
+          <About />
         </section>
-        <section id="experience_main">
+        <section id="experience">
           <div>Hello Experience</div>
         </section>
       </section>
       <section
         id="hidden_layer"
         ref={hiddenLayerRef}
-        class="min-h-full h-[2000px] bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out"
+        class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out pt-48"
       >
         <section>
           <About_hidden />
         </section>
-        <section id="projects">
+        <section id="projects_hidden">
           <div>Hello Hidden Projects</div>
+          <About_hidden />
         </section>
-        <section id="experience">
+        <section id="experience_hidden">
           <div>Hello Hidden Experience</div>
         </section>
       </section>

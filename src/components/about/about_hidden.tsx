@@ -3,7 +3,7 @@ import ImgThunder from "~/media/thunder.png?jsx";
 
 export default component$(() => {
   return (
-    <div class="flex-col flex align-middle flex-nowrap items-center justify-center mt-[25%]">
+    <div class="flex-col flex align-middle flex-nowrap items-center justify-center">
       <ImgThunder class="w-full absolute h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
       <p class="text-2xl text-black font-extrabold">About page ...</p>
       <div class="">
@@ -32,36 +32,6 @@ export default component$(() => {
                 alt=""
               />
           </div>
-          {/* <div class="gs_reveal gs_reveal_fromLeft ">
-            <div class="card">
-              <img
-                width="479"
-                height="479"
-                src="https://picsum.photos/479/479?index=1"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="gs_reveal gs_reveal_fromLeft ">
-            <div class="card">
-              <img
-                width="479"
-                height="479"
-                src="https://picsum.photos/479/479?index=1"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="gs_reveal gs_reveal_fromLeft ">
-            <div class="card">
-              <img
-                width="479"
-                height="479"
-                src="https://picsum.photos/479/479?index=1"
-                alt=""
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
