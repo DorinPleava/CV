@@ -1,0 +1,68 @@
+
+Text to include:
+
+Hi, I'm Dorin and I'm a software engineer passionate about crafting innovative solutions.
+I thrive on taking up captivating projects in diverse technologies and programming languages.
+
+Experienced Software Engineer | 10+ Years of Expertise
+
+Passionate and results-driven Software Engineer with over 10 years of experience. Skilled in developing innovative web applications, automating IT infrastructure management, and working with collaborative teams. Proficient in React JS, Python, Ruby, and CI/CD processes (GitLab, Docker, GitHub Actions). Eager to create impactful software that empowers users and businesses alike.
+
+Software Engineer
+Porsche Engineering · Full-time
+Feb 2022 - Present · 1 yr 6 mos
+● Started a new web application project that focuses on comparing multiple routing engines for electric vehicles. For the backend, I am utilizing Python's FastAPI framework, while the frontend is built with React JS.
+The aim is to analyze the influence of various parameters on calculating the most economical as well as the fastest route.
+● The app is built on top of a micro frontend architecture, employing a combination of TypeScript, Tailwind CSS, and JavaScript to enhance the user experience and ensure seamless integration across different modules.
+● Took ownership of the project's full CI/CD pipeline, leveraging GitLab and Docker for efficient Continuous Integration (CI) and Continuous Deployment (CD) processes.
+● As the project grew and new co workers joined the project, I demonstrated ability to lead and mentor teams, delegate tasks, and provide guidance to junior developers.
+Using GitLab and Docker for CI and CD.● Started a new web application project that focuses on comparing multiple routing engines for electric vehicles. For the backend, I am utilizing Python's FastAPI framework, while the frontend is built with React JS. The aim is to analyze the influence of various parameters on calculating the most economical as well as the fastest route. ● The app is built on top of a micro frontend architecture, employing a combination of TypeScript, Tailwind CSS, and JavaScript to enhance the user experience and ensure seamless integration across different modules. ● Took ownership of the project's full CI/CD pipeline, leveraging GitLab and Docker for efficient Continuous Integration (CI) and Continuous Deployment (CD) processes. ● As the project grew and new co workers joined the project, I demonstrated ability to lead and mentor teams, delegate tasks, and provide guidance to junior developers. Using GitLab and Docker for CI and CD.
+Skills: React.js · React · JavaScript · PythonSkills: React.js · React · JavaScript · Python
+------------------------------------------------------------------------------------------------------
+Software Engineer
+Puppet · Full-timePuppet · Full-time
+May 2019 - Feb 2022 · 2 yrs 10 mos
+Puppet is a service application primarily written in Ruby, designed to streamline and automate IT infrastructure management and intricate workflows with a user-friendly yet robust approach.
+● In summary, my responsibilities encompass creating new features in the core application, continuous integration, releasing new versions of Puppet, developing internal tools, conducting code reviews, engaging in
+pair programming, extending support for additional operating systems, and addressing customer tickets.
+● I work extensively with Ruby language, but also have some C++ for maintaining legacy projects, and Go for rewriting legacy projects.
+● As 70% of Puppet core is open-source and supports almost all operating systems, I collaborated with the community to test, fix, and enhance software, thereby ensuring its stability and reliability across a diverse
+range of operating systems.
+● I used Jenkins and GitHub Actions for efficient CI/CD processes, as well as Ec2 instances for AWS.Puppet is a service application primarily written in Ruby, designed to streamline and automate IT infrastructure management and intricate workflows with a user-friendly yet robust approach. ● In summary, my responsibilities encompass creating new features in the core application, continuous integration, releasing new versions of Puppet, developing internal tools, conducting code reviews, engaging in pair programming, extending support for additional operating systems, and addressing customer tickets. ● I work extensively with Ruby language, but also have some C++ for maintaining legacy projects, and Go for rewriting legacy projects. ● As 70% of Puppet core is open-source and supports almost all operating systems, I collaborated with the community to test, fix, and enhance software, thereby ensuring its stability and reliability across a diverse range of operating systems. ● I used Jenkins and GitHub Actions for efficient CI/CD processes, as well as Ec2 instances for AWS.
+Skills: Go (Programming Language) · RubySkills: Go (Programming Language) · Ruby
+------------------------------------------------------------------------------------------------------
+Software Engineer
+NagarroNagarro
+Nov 2018 - Apr 2019 · 6 mos
+Județul Timiș, RomâniaJudețul Timiș, România
+● Actively contributed to the development and deployment of .Net Core microservices using Docker.
+● Implemented microservices to gather data from diverse factory machines.
+● Leveraged NodeRed, a powerful tool for integrating APIs, hardware devices, and online services, to generate customized Angular web applications based on customer requirements.● Actively contributed to the development and deployment of .Net Core microservices using Docker. ● Implemented microservices to gather data from diverse factory machines. ● Leveraged NodeRed, a powerful tool for integrating APIs, hardware devices, and online services, to generate customized Angular web applications based on customer requirements.
+Skills: Angular · .NET Core · JavaScript · C#Skills: Angular · .NET Core · JavaScript · C#
+------------------------------------------------------------------------------------------------------
+Software Engineer
+Honeywell
+May 2013 - Nov 2018 · 5 yrs 7 mos
+Județul Timiș, RomâniaJudețul Timiș, România
+● Developed desktop applications, libraries for smart meters and tools using Visual Studio (C#) to test and
+configure various functions in smart Electric/Gas meters.
+● Implemented graphical representation of information retrieved, displayed in the User Interface.
+● Utilized Python to create production scripts for configuring meters on the assembly line.● Developed desktop applications, libraries for smart meters and tools using Visual Studio (C#) to test and configure various functions in smart Electric/Gas meters. ● Implemented graphical representation of information retrieved, displayed in the User Interface. ● Utilized Python to create production scripts for configuring meters on the assembly line.
+Skills: C# · Python
+------------------------------------------------------------------------------------------------------
+SaaS website(In progress)
+May 2021 - Present
+● Developed a website aimed at assisting users in finding the best silver/gold prices across multiple websites
+(currently limited to two websites), allowing each logged-in user to vote once per day for the website they
+want to be analyzed. At the end of the day, an Azure-hosted service would analyze the chosen website, extract
+the best prices, parse the data, calculate the price per ounce, and store the information in a database.
+● Technologies used:
+ - Presentation website, hosted on Vercel using Next.js, TypeScript, TailwindCSS, TRPC and React.
+ - Azure web services to handle long-running tasks, ensuring efficient analysis and data processing.
+ - Leveraged Planetscale for the database management, ensuring secure and reliable storage of price 
+ data.
+ - Implemented GitHub Actions for seamless Continuous Integration (CI), Continuous Deployment (CD), and cron job functionalities.
+ - Server-side rendering of best products
+ - Redis to cache daily quote about precious metals
+ - Elastic Search for filtering and searching (currently disabled as it costs $$$)
+ - Stripe payment gateway to enable users to purchase tokens, which could increase the value of their vote, or just start the analysis instantly

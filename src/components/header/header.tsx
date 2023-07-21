@@ -7,7 +7,7 @@ export default component$(() => {
       <div class="flex items-center justify-between p-7 relative">
         <ul class="flex absolute gap-8 border left-1/2 -translate-x-1/2 border-white border-opacity-10 px-5 py-2 rounded-full bg-[rgba(255,255,255,0.05)]">
           <li class="text-slate-200 hover:text-slate-400">
-            <a href="#about">About</a>
+            <a href="#front_layer">About</a>
           </li>
           <li class="text-slate-200 hover:text-slate-400">
             <a href="#projects">Projects</a>

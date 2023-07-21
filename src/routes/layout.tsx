@@ -27,7 +27,6 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 const mouseMoveEvent = $(async (e: MouseEvent) => {
-  
   const hiddenLayerDiv = document.getElementById("hidden_layer");
   const bounding = hiddenLayerDiv?.getBoundingClientRect();
 
@@ -38,12 +37,12 @@ const mouseMoveEvent = $(async (e: MouseEvent) => {
   const xx = e.clientX - bounding.left + hiddenLayerDiv.scrollLeft;
   const yy = e.clientY - bounding.top + hiddenLayerDiv.scrollTop;
 
-  console.log("mouseMoveEvent", xx, yy);
+  // console.log("mouseMoveEvent", xx, yy);
 
   gsap.to("#hidden_layer", {
     "--x": `${xx}px`,
     "--y": `${yy}px`,
-    duration: 0.5,
+    duration: 0.3,
     ease: "sine.out",
   });
 });
@@ -51,26 +50,51 @@ const mouseMoveEvent = $(async (e: MouseEvent) => {
 function animateFrom(elem: any, direction: any) {
   direction = direction || 1;
   let x = 0,
-    y = direction * 100;
+    y = direction * 100,
+    duration = 2,
+    delay = 0;
   if (elem.classList.contains("gs_reveal_fromLeft")) {
-    x = -100;
+    x = -1000;
     y = 0;
   } else if (elem.classList.contains("gs_reveal_fromRight")) {
-    x = 100;
+    x = 1000;
     y = 0;
+  } else if (elem.classList.contains("gs_reveal_fromTop")) {
+    x = -100;
+    y = -100;
+  } else if (elem.classList.contains("gs_reveal_fromCenter")) {
+    x = 0;
+    y = 0;
+    duration = 5;
+  } else if (elem.classList.contains("gs_reveal_about_textRight")) {
+    x = 1000;
+    y = 0;
+    delay = 1;
+    duration = 2;
+  } else if (elem.classList.contains("gs_reveal_about_textLeft")) {
+    x = -1000;
+    y = 0;
+    delay = 1;
+    duration = 2;
+  } else if (elem.classList.contains("gs_reveal_about_textCenter")) {
+    x = 0;
+    y = 0;
+    delay = 1;
+    duration = 5;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
   gsap.fromTo(
     elem,
-    { x: x, y: y, autoAlpha: 0 },
+    { x: x, y: y, autoAlpha: 0, delay: delay },
     {
-      duration: 1.25,
+      duration,
       x: 0,
       y: 0,
       autoAlpha: 1,
       ease: "expo",
       overwrite: "auto",
+      delay: delay,
     }
   );
 }
@@ -110,9 +134,10 @@ export default component$(() => {
     document.addEventListener("keyup", disableCodeViewMouse);
 
     (function () {
-      console.log("gsapDOMContentLoaded");
-
-      gsap.registerPlugin(ScrollTrigger);
+      if (typeof window !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+      }
+      // gsap.registerPlugin(ScrollTrigger);
 
       gsap.utils.toArray(".gs_reveal").forEach(function (elem: any) {
         gsap.set(elem, { autoAlpha: 0 }); // assure that the element is hidden when scrolled into view
@@ -144,7 +169,7 @@ export default component$(() => {
     // <div class="min-h-screen h-[100vh] box-border">
     <div class="">
       <Header />
-      <section id="front_layer" class="mt-48">
+      <section id="front_layer" class="pt-48">
         <section id="about">
           <About />
         </section>
