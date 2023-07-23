@@ -47,12 +47,13 @@ const mouseMoveEvent = $(async (e: MouseEvent) => {
   });
 });
 
-function animateFrom(elem: any, direction: any) {
+function animateFrom(elem: any, direction: any, baseDelayAndDuration: any ) {
   direction = direction || 1;
   let x = 0,
     y = direction * 100,
     duration = 2,
     delay = 0;
+
   if (elem.classList.contains("gs_reveal_fromLeft")) {
     x = -1000;
     y = 0;
@@ -67,20 +68,25 @@ function animateFrom(elem: any, direction: any) {
     y = 0;
     duration = 5;
   } else if (elem.classList.contains("gs_reveal_about_textRight")) {
-    x = 1000;
+    x = 100;
     y = 0;
-    delay = 1;
-    duration = 2;
+    delay = 2.5 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.contains("gs_reveal_about_textLeft")) {
-    x = -1000;
+    x = -100;
     y = 0;
-    delay = 1;
-    duration = 2;
+    delay = 2.5 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.contains("gs_reveal_about_textCenter")) {
     x = 0;
     y = 0;
-    delay = 1;
-    duration = 5;
+    delay = 3 * baseDelayAndDuration;
+    duration = 5 * baseDelayAndDuration;
+  }else if (elem.classList.value.includes("gs_reveal_about_name_textCenter")) {
+    x = 0;
+    y = 0;
+    delay = 1.5 * baseDelayAndDuration;
+    duration = 5 * baseDelayAndDuration;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
@@ -146,14 +152,15 @@ export default component$(() => {
           trigger: elem,
           markers: true,
           onEnter: function () {
-            animateFrom(elem, 1);
+            animateFrom(elem, 1, 1);
           },
           onEnterBack: function () {
-            animateFrom(elem, -1);
+            animateFrom(elem, -1, 0.5);
           },
           onLeave: function () {
             gsap.set(elem, { autoAlpha: 0 });
           }, // assure that the element is hidden when scrolled into view
+          // once: true,
         });
       });
     })();
@@ -175,7 +182,7 @@ export default component$(() => {
         </section>
         <section id="projects">
           <div>Hello Projects</div>
-          <About />
+          {/* <About /> */}
         </section>
         <section id="experience">
           <div>Hello Experience</div>
