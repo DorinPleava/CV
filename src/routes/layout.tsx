@@ -67,26 +67,36 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any ) {
     x = 0;
     y = 0;
     duration = 5;
-  } else if (elem.classList.contains("gs_reveal_about_textRight")) {
-    x = 100;
+  } else if (elem.classList.contains("gs_reveal_about_more_text")) {
+    x = 400;
     y = 0;
-    delay = 2.5 * baseDelayAndDuration;
-    duration = 2 * baseDelayAndDuration;
-  } else if (elem.classList.contains("gs_reveal_about_textLeft")) {
+    delay = 5 * baseDelayAndDuration;
+    duration = 3 * baseDelayAndDuration;
+  } else if (elem.classList.contains("gs_reveal_about_passion")) {
     x = -100;
     y = 0;
-    delay = 2.5 * baseDelayAndDuration;
+    delay = 3.5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  } else if (elem.classList.contains("gs_reveal_about_textCenter")) {
+  } else if (elem.classList.contains("gs_reveal_about_experience")) {
     x = 0;
     y = 0;
-    delay = 3 * baseDelayAndDuration;
+    delay = 2.5 * baseDelayAndDuration;
     duration = 5 * baseDelayAndDuration;
-  }else if (elem.classList.value.includes("gs_reveal_about_name_textCenter")) {
+  }else if (elem.classList.value.includes("gs_reveal_about_name")) {
     x = 0;
     y = 0;
     delay = 1.5 * baseDelayAndDuration;
     duration = 5 * baseDelayAndDuration;
+  }else if (elem.classList.value.includes("gs_reveal_about_hello")) {
+    x = 0;
+    y = 0;
+    delay = 0.5
+    duration = 5 * baseDelayAndDuration;
+  }else if (elem.classList.value.includes("gs_reveal_about_see_work")) {
+    x = 1000;
+    y = 0;
+    delay = 5 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
@@ -150,17 +160,17 @@ export default component$(() => {
 
         ScrollTrigger.create({
           trigger: elem,
-          markers: true,
+          // markers: true,
           onEnter: function () {
             animateFrom(elem, 1, 1);
           },
           onEnterBack: function () {
             animateFrom(elem, -1, 0.5);
           },
-          onLeave: function () {
-            gsap.set(elem, { autoAlpha: 0 });
-          }, // assure that the element is hidden when scrolled into view
-          // once: true,
+          // onLeave: function () {
+            // gsap.set(elem, { autoAlpha: 0 });
+          // }, // assure that the element is hidden when scrolled into view
+          once: true,
         });
       });
     })();
