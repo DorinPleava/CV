@@ -70,7 +70,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
   } else if (elem.classList.contains("gs_reveal_about_more_text")) {
     x = 400;
     y = 0;
-    delay = 5 * baseDelayAndDuration;
+    delay = 4 * baseDelayAndDuration;
     duration = 3 * baseDelayAndDuration;
   } else if (elem.classList.contains("gs_reveal_about_passion")) {
     x = -100;
@@ -92,11 +92,23 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     y = 0;
     delay = 0.5;
     duration = 5 * baseDelayAndDuration;
-  } else if (elem.classList.value.includes("gs_revseal_about_contact_me")) {
-    x = 1000;
-    y = 0;
+  } else if (elem.classList.value.includes("gs_reveal_about_contact_me")) {
+    x = 0;
+    y = 1000;
     delay = 5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_press_v")) {
+    x = 0;
+    y = 0;
+    delay = 5 * baseDelayAndDuration;
+    duration = 4 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
+    x = -500;
+    y = 0;
+    delay = 4.5 * baseDelayAndDuration;
+    duration = 4 * baseDelayAndDuration;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";

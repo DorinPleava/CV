@@ -25,6 +25,15 @@ export default component$(() => {
           </li>
         </ul>
       </div>
+      <div class=" gs_reveal gs_reveal_press_v opacity-0 absolute hidden md:flex w-[200px] ml-7 mt-5 md:mt-10 left-3/4 -translate-x-3/4 border items-center text-center border-white border-opacity-10 px-2 pb-3 rounded-full bg-[rgba(255,25,255,0.08)] justify-between text-slate-200">
+        <span class="justify-center">
+          press <span class="font-black">&</span> hold
+          <span class="text-3xl font-black animate-pulse text-purple-700">
+            "v"
+          </span>
+          <span>to view underlying code</span>
+        </span>
+      </div>
     </header>
   );
 });
