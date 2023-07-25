@@ -6,7 +6,7 @@ export default component$(() => {
 
   return (
     <footer>
-      <div class="container">
+      <div class="container text-white">
         <a href="https://www.builder.io/" target="_blank" class="">
           <span>Made with ♡ by Builder.io</span>
           <span class="">|</span>

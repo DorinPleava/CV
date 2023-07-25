@@ -47,7 +47,7 @@ const mouseMoveEvent = $(async (e: MouseEvent) => {
   });
 });
 
-function animateFrom(elem: any, direction: any, baseDelayAndDuration: any ) {
+function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
   direction = direction || 1;
   let x = 0,
     y = direction * 100,
@@ -82,17 +82,17 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any ) {
     y = 0;
     delay = 2.5 * baseDelayAndDuration;
     duration = 5 * baseDelayAndDuration;
-  }else if (elem.classList.value.includes("gs_reveal_about_name")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_name")) {
     x = 0;
     y = 0;
     delay = 1.5 * baseDelayAndDuration;
     duration = 5 * baseDelayAndDuration;
-  }else if (elem.classList.value.includes("gs_reveal_about_hello")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_hello")) {
     x = 0;
     y = 0;
-    delay = 0.5
+    delay = 0.5;
     duration = 5 * baseDelayAndDuration;
-  }else if (elem.classList.value.includes("gs_reveal_about_see_work")) {
+  } else if (elem.classList.value.includes("gs_revseal_about_contact_me")) {
     x = 1000;
     y = 0;
     delay = 5 * baseDelayAndDuration;
@@ -149,6 +149,11 @@ export default component$(() => {
     document.addEventListener("keydown", enableCodeViewMouse);
     document.addEventListener("keyup", disableCodeViewMouse);
 
+    // // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    // const vh = window.innerHeight * 0.01;
+    // // Then we set the value in the --vh custom property to the root of the document
+    // document.documentElement.style.setProperty("--vh", `${vh}px`);
+
     (function () {
       if (typeof window !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
@@ -168,7 +173,7 @@ export default component$(() => {
             animateFrom(elem, -1, 0.5);
           },
           // onLeave: function () {
-            // gsap.set(elem, { autoAlpha: 0 });
+          // gsap.set(elem, { autoAlpha: 0 });
           // }, // assure that the element is hidden when scrolled into view
           once: true,
         });
@@ -186,13 +191,13 @@ export default component$(() => {
     // <div class="min-h-screen h-[100vh] box-border">
     <div class="">
       <Header />
-      <section id="front_layer" class="pt-48">
+      <section id="front_layer" class="">
         <section id="about">
           <About />
         </section>
         <section id="projects">
           <div>Hello Projects</div>
-          {/* <About /> */}
+          <About />
         </section>
         <section id="experience">
           <div>Hello Experience</div>
@@ -201,7 +206,7 @@ export default component$(() => {
       <section
         id="hidden_layer"
         ref={hiddenLayerRef}
-        class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out pt-48"
+        class="min-h-full bg-red-950 [clip-path:_circle(5px_at_var(--x)_var(--y))] absolute top-0 left-0 w-full invisible transition-[clip-path] duration-100 ease-in-out"
       >
         <section>
           <About_hidden />
