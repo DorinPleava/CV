@@ -108,7 +108,49 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     x = -500;
     y = 0;
     delay = 4.5 * baseDelayAndDuration;
-    duration = 4 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_1")) {
+    x = 500;
+    y = 0;
+    delay = 5 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_2")) {
+    x = 500;
+    y = 0;
+    delay = 5.1 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_3")) {
+    x = 500;
+    y = 0;
+    delay = 5.2 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_4")) {
+    x = 500;
+    y = 0;
+    delay = 5.3 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_5")) {
+    x = 500;
+    y = 0;
+    delay = 5.4 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_6")) {
+    x = 500;
+    y = 0;
+    delay = 5.5 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
+  }
+  else if (elem.classList.value.includes("gs_reveal_about_skill_7")) {
+    x = 500;
+    y = 0;
+    delay = 5.6 * baseDelayAndDuration;
+    duration = 2 * baseDelayAndDuration;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
@@ -138,7 +180,7 @@ export default component$(() => {
 
     hiddenLayerRef.value &&
       (hiddenLayerRef.value.style.clipPath =
-        "circle(100px at var(--x) var(--y))");
+        "circle(200px at var(--x) var(--y))");
 
     hiddenLayerRef.value && (hiddenLayerRef.value.style.visibility = "visible");
     hiddenLayerRef.value &&

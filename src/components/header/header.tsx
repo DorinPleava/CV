@@ -31,7 +31,7 @@ export default component$(() => {
           <span class="text-3xl font-black animate-pulse text-purple-700">
             "v"
           </span>
-          <span>to view underlying code</span>
+          <span>to view extras</span>
         </span>
       </div>
     </header>

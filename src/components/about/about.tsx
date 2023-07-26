@@ -8,16 +8,16 @@ export default component$(() => {
   return (
     // height: calc(var(--vh, 1vh) * 100);
     <div
-      class="md:max-w-[70%] relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48 h-[calc(var(--vh,_1vh)_*_100)]"
+      class="lg:max-w-[70%] max-w-full relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48 h-[calc(var(--vh,_1vh)_*_100)]"
       id="about"
     >
       <ImgThunder class="w-full absolute top-0 h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
 
-      <div class="flex-col text-4xl md:flex">
+      <div class=" flex-col text-4xl md:flex">
         <p class="text-white font-extrabold gs_reveal gs_reveal_fromCenter opacity-0">
           Hello there,
         </p>
-        <div class="flex items-center md:items-baseline">
+        <div class="md:pl-24 pl-0 md:pt-4 pt-0 flex items-center md:items-baseline">
           <p class="text-white font-extrabold gs_reveal gs_reveal_about_name opacity-0">
             I'm
           </p>
@@ -26,7 +26,7 @@ export default component$(() => {
           </p>
         </div>
       </div>
-      <p class="text-base text-gray-500 font-extrabold gs_reveal gs_reveal_about_experience opacity-0">
+      <p class="md:pl-32 pl-0 md:pb-4 pb-0 text-base text-gray-500 font-extrabold gs_reveal gs_reveal_about_experience opacity-0">
         (Software Engineer | 10+ Years of Experience)
       </p>
       <p class="text-lg md:text-2xl pt-4 gs_reveal gs_reveal_about_passion text-white font-extrabold opacity-0">
@@ -36,14 +36,28 @@ export default component$(() => {
         I thrive on taking up captivating projects in diverse technologies and
         programming languages
       </p>
-      <p class="text-lg md:text-2xl pt-4 text-white font-extrabold hidden md:flex gs_reveal gs_reveal_about_big_text opacity-0">
-        Passionate and results-driven Software Engineer with over 10 years of
-        experience. Skilled in developing innovative web applications,
-        automating IT infrastructure management, and working with collaborative
-        teams. Proficient in React JS, Python, Ruby, and CI/CD processes
-        (GitLab, Docker, GitHub Actions). Eager to create impactful software
-        that empowers users and businesses alike.
-      </p>
+      <ul class="list-disc flex-col text-lg md:text-2xl pt-4 text-white font-extrabold hidden md:flex gs_reveal gs_reveal_about_big_text opacity-0">
+        Skilled in developing
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_1 opacity-0">Web Apps</li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_2 opacity-0">
+          Javascript
+        </li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_3 opacity-0">
+          Typescript
+        </li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_4 opacity-0">
+          Node.Js
+        </li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_5 opacity-0">
+          React
+        </li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_6 opacity-0">
+          Python
+        </li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_7 opacity-0">
+          CI/CD (GitLab and GitHub Actions)
+        </li>
+      </ul>
       <div class="flex items-center justify-between pt-10 relative gs_reveal gs_reveal_about_contact_me opacity-0">
         <ul class="flex gap-8 border border-white border-opacity-10 px-5 py-2 rounded-full bg-[rgba(255,25,255,0.08)] justify-between items-center w-full">
           <li class="text-slate-200 hover:text-slate-400 text-sm md:text-2xl font-extrabold">
