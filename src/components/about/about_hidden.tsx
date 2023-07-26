@@ -11,7 +11,7 @@ export default component$(() => {
       class="lg:max-w-[70%] max-w-full relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48 h-[calc(var(--vh,_1vh)_*_100)]"
       id="about"
     >
-      <ImgThunder class="w-full absolute top-0 h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
+      <ImgThunder alt="thunder_back_about" class="w-full absolute top-0 h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
 
       <div class=" flex-col text-4xl md:flex">
         <p class="text-white font-extrabold gs_reveal gs_reveal_fromCenter opacity-0">

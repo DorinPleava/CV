@@ -11,7 +11,7 @@ export default component$(() => {
       class="lg:max-w-[70%] max-w-full relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48 h-[calc(var(--vh,_1vh)_*_100)]"
       id="about"
     >
-      <ImgThunder class="w-full absolute top-0 h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
+      <ImgThunder alt="thunder_back_about" class="w-full absolute top-0 h-auto object-cover -z-[1] opacity-20 pointer-events-none" />
 
       <div class=" flex-col text-4xl md:flex">
         <p class="text-white font-extrabold gs_reveal gs_reveal_fromCenter opacity-0">
@@ -38,7 +38,9 @@ export default component$(() => {
       </p>
       <ul class="list-disc flex-col text-lg md:text-2xl pt-4 text-white font-extrabold hidden md:flex gs_reveal gs_reveal_about_big_text opacity-0">
         Skilled in developing
-        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_1 opacity-0">Web Apps</li>
+        <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_1 opacity-0">
+          Web Apps
+        </li>
         <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_2 opacity-0">
           Javascript
         </li>
@@ -91,6 +93,13 @@ export default component$(() => {
         <button
           class="border-2 text-slate-400 rounded-full w-12 h-12 animate-bounce mt-4 opacity-50"
           aria-label="Scroll down"
+          onClick$={() => {
+            console.log("clicked");
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: "smooth",
+            });
+          }}
         >
           <svg
             class="w-6 h-6 mx-auto"
