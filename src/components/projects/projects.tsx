@@ -5,7 +5,7 @@ import ImgThisWebsiteWide from "/public/this_website_wide.png?jsx";
 export default component$(() => {
   return (
     <div
-      class="max-w-full relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48"
+      class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48"
       id="projects"
     >
       <p class="text-2xl text-white font-extrabold">Projects</p>
@@ -13,14 +13,19 @@ export default component$(() => {
       <div class="grid gap-y-28">
         <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
           <div class="w-full lg:w-2/5">
-            <ImgThisWebsite alt="project_this_website" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
+            <ImgThisWebsite
+              alt="project_this_website"
+              class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+            />
           </div>
-          <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+          <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-4 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
-                <ImgThisWebsiteWide alt="project_this_website_wide" class="rounded-xl w-auto h-auto" />
+                <ImgThisWebsiteWide
+                  alt="project_this_website_wide"
+                  class="rounded-xl w-auto h-auto"
+                />
               </div>
-
               <h1 class="text-3xl font-bold pt-8 lg:pt-0">This website</h1>
               <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-purple-500 opacity-25"></div>
               <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
@@ -46,7 +51,6 @@ export default component$(() => {
                 </svg>
                 React
               </p>
-
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
                 <svg
                   class="h-4 fill-current pr-1"
@@ -69,7 +73,6 @@ export default component$(() => {
                 </svg>
                 Typescript
               </p>
-
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
                 <svg
                   class="h-4 fill-current pr-1"
@@ -84,7 +87,11 @@ export default component$(() => {
                 TailwindCSS
               </p>
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
-                <svg class="h-4 fill-current pr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                <svg
+                  class="h-4 fill-current pr-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 128 128"
+                >
                   <path
                     style=" stroke:none;fill-rule:nonzero;fill:rgb(9.411765%,71.372549%,96.470588%);fill-opacity:1;"
                     d="M 95.671875 112.554688 L 78.242188 95.214844 L 77.996094 95.257812 L 77.996094 95.074219 L 40.929688 58.417969 L 50.082031 49.597656 L 44.699219 18.757812 L 19.230469 50.355469 C 14.90625 54.722656 14.074219 61.863281 17.207031 67.105469 L 33.125 93.527344 C 35.558594 97.578125 39.382812 100.183594 44.722656 99.992188 C 56.027344 99.589844 60.996094 99.589844 60.996094 99.589844 L 95.664062 112.546875 L 95.671875 112.558594 Z M 95.671875 112.554688 "
@@ -100,11 +107,10 @@ export default component$(() => {
                 </svg>{" "}
                 Qwik
               </p>
-
               <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
                 Short description
               </p>
-              <p class="text-sm">
+              <p class="text-lg">
                 Did this site load fast?
                 <br />I hope so, because I used{" "}
                 <a
@@ -112,17 +118,29 @@ export default component$(() => {
                   href="https://qwik.builder.io/"
                   target="_blank"
                 >
-                  Qwik
+                  Qwik.
                 </a>
-                it claims it's the fastest front-end framework right now(2023)
-                regardless of the size and complexity of your site.
-                <br />
-                It's considered as O(1) complexity as it can achieve consistent
-                performance at scale
               </p>
-
+              <p>
+                The fastest front-end framework right now(2023) regardless of
+                the size and complexity of your site.
+              </p>
+              <p>
+                Its load time is O(1), so it can achieve consistent performance
+                at scale
+              </p>
               <div class="pt-12 pb-8">
-                <button class="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full">
+                <button
+                  id="myButton1"
+                  onClick$={(event: any) => {
+                    // temporary change button text
+                    event.target.innerHTML = "Already here 😊";
+                    setTimeout(() => {
+                      event.target.innerHTML = "Go to project";
+                    }, 1000);
+                  }}
+                  class="bg-purple-700 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded-full"
+                >
                   Go to project
                 </button>
               </div>
@@ -132,12 +150,18 @@ export default component$(() => {
 
         <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
           <div class="w-full lg:w-2/5">
-            <ImgThisWebsite alt="project_this_website" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
+            <ImgThisWebsite
+              alt="project_this_website"
+              class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
+            />
           </div>
           <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
-                <ImgThisWebsiteWide alt="project_this_website_wide" class=" rounded-xl w-auto h-auto" />
+                <ImgThisWebsiteWide
+                  alt="project_this_website_wide"
+                  class=" rounded-xl w-auto h-auto"
+                />
               </div>
 
               <h1 class="text-3xl font-bold pt-8 lg:pt-0">SAAS website</h1>
@@ -226,10 +250,10 @@ export default component$(() => {
                   href="https://qwik.builder.io/"
                   target="_blank"
                 >
-                  Qwik{" "}!
+                  Qwik !
                 </a>
-                Fastest front-end framework right now(2023)
-                regardless of the size and complexity of your site.
+                Fastest front-end framework right now(2023) regardless of the
+                size and complexity of your site.
                 <br />
                 It's considered as O(1) complexity as it can achieve consistent
                 performance at scale
