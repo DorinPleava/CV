@@ -13,12 +13,12 @@ export default component$(() => {
       <div class="grid gap-y-28">
         <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
           <div class="w-full lg:w-2/5">
-            <ImgThisWebsite class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
+            {/* <ImgThisWebsite class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" /> */}
           </div>
           <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
-                <ImgThisWebsiteWide class="rounded-xl w-auto h-auto" />
+                {/* <ImgThisWebsiteWide class="rounded-xl w-auto h-auto" /> */}
               </div>
 
               <h1 class="text-3xl font-bold pt-8 lg:pt-0">This website</h1>

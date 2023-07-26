@@ -8,6 +8,8 @@ import About from "~/components/about/about";
 import About_hidden from "~/components/about/about_hidden";
 import Footer from "~/components/footer/footer";
 import Header from "~/components/header/header";
+import Projects from "~/components/projects/projects";
+import Projects_hidden from "~/components/projects/projects_hidden";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -94,59 +96,50 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     duration = 5 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_contact_me")) {
     x = 0;
-    y = 1000;
+    y = 500;
     delay = 5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_press_v")) {
+  } else if (elem.classList.value.includes("gs_reveal_press_v")) {
     x = 0;
     y = 0;
     delay = 5 * baseDelayAndDuration;
     duration = 4 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
     x = -500;
     y = 0;
     delay = 4.5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_1")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_1")) {
     x = 500;
     y = 0;
     delay = 5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_2")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_2")) {
     x = 500;
     y = 0;
     delay = 5.1 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_3")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_3")) {
     x = 500;
     y = 0;
     delay = 5.2 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_4")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_4")) {
     x = 500;
     y = 0;
     delay = 5.3 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_5")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_5")) {
     x = 500;
     y = 0;
     delay = 5.4 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_6")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_6")) {
     x = 500;
     y = 0;
     delay = 5.5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
-  }
-  else if (elem.classList.value.includes("gs_reveal_about_skill_7")) {
+  } else if (elem.classList.value.includes("gs_reveal_about_skill_7")) {
     x = 500;
     y = 0;
     delay = 5.6 * baseDelayAndDuration;
@@ -250,11 +243,10 @@ export default component$(() => {
           <About />
         </section>
         <section id="projects">
-          <div>Hello Projects</div>
-          <About />
+          <Projects />
         </section>
         <section id="experience">
-          <div>Hello Experience</div>
+          <About />
         </section>
       </section>
       <section
@@ -266,11 +258,10 @@ export default component$(() => {
           <About_hidden />
         </section>
         <section id="projects_hidden">
-          <div>Hello Hidden Projects</div>
-          <About_hidden />
+          <Projects_hidden />
         </section>
         <section id="experience_hidden">
-          <div>Hello Hidden Experience</div>
+          <About_hidden />
         </section>
       </section>
 

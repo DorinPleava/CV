@@ -29,11 +29,11 @@ export default component$(() => {
         <span class="justify-center">
           press <span class="font-black">&</span> hold
           <span class="text-3xl font-black animate-pulse text-purple-700">
-            "v"
+          "v"
           </span>
-          <span>to view extras</span>
+          <span>to view extra details</span>
         </span>
-      </div>
-    </header>
+      </div> 
+      </header>
   );
 });
