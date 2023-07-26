@@ -11,7 +11,7 @@ export default component$(() => {
       <p class="text-2xl text-white font-extrabold">Projects</p>
 
       <div class="grid gap-y-28">
-        <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
+        <div class="max-w-4xl flex items-center flex-wrap mx-auto">
           <div class="w-full lg:w-2/5">
             <ImgThisWebsite
               alt="project_this_website"

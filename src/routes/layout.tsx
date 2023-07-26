@@ -102,7 +102,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
   } else if (elem.classList.value.includes("gs_reveal_press_v")) {
     x = 0;
     y = 0;
-    delay = 5 * baseDelayAndDuration;
+    delay = 0 * baseDelayAndDuration;
     duration = 4 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
     x = -500;
@@ -191,21 +191,39 @@ export default component$(() => {
         "circle(0px at var(--x) var(--y))");
   });
 
+  const revealHidden = $(async () => {
+    hiddenLayerRef.value &&
+      (hiddenLayerRef.value.style.clipPath =
+        "circle(140% at 100% 100%)");
+
+    hiddenLayerRef.value && (hiddenLayerRef.value.style.visibility = "visible");
+    hiddenLayerRef.value &&
+      (hiddenLayerRef.value.style.animation = "clip 1s linear");
+  });
+
+  const hideHidden = $(async () => {
+    hiddenLayerRef.value &&
+      (hiddenLayerRef.value.style.clipPath =
+        "circle(0px at var(--x) var(--y))");
+  });
+
   useVisibleTask$(() => {
     document.addEventListener("mousemove", mouseMoveEvent);
     document.addEventListener("keydown", enableCodeViewMouse);
     document.addEventListener("keyup", disableCodeViewMouse);
 
-    // // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    // const vh = window.innerHeight * 0.01;
-    // // Then we set the value in the --vh custom property to the root of the document
-    // document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document
+      .getElementById("view_hidden")
+      ?.addEventListener("click", revealHidden);
+
+    document
+      .getElementById("hide_hidden")
+      ?.addEventListener("click", hideHidden);
 
     (function () {
       if (typeof window !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
       }
-      // gsap.registerPlugin(ScrollTrigger);
 
       gsap.utils.toArray(".gs_reveal").forEach(function (elem: any) {
         gsap.set(elem, { autoAlpha: 0 }); // assure that the element is hidden when scrolled into view
@@ -219,9 +237,6 @@ export default component$(() => {
           onEnterBack: function () {
             animateFrom(elem, -1, 0.5);
           },
-          // onLeave: function () {
-          // gsap.set(elem, { autoAlpha: 0 });
-          // }, // assure that the element is hidden when scrolled into view
           once: true,
         });
       });
@@ -231,6 +246,8 @@ export default component$(() => {
       document.removeEventListener("mousemove", mouseMoveEvent);
       document.removeEventListener("keydown", enableCodeViewMouse);
       document.removeEventListener("keyup", disableCodeViewMouse);
+      document.removeEventListener("click", revealHidden);
+      document.removeEventListener("click", hideHidden);
     };
   });
 
