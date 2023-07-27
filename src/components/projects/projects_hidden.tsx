@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import ImgThisWebsite from "/public/this_website.png?jsx";
-import ImgThisWebsiteWide from "/public/this_website_wide.png?jsx";
-import ImgThisWebsite100 from "/public/this_website_100.jpeg?jsx";
+import ImgThisWebsite100 from "/public/resized/this_website_100.jpeg?jsx";
+import ImgSAAS from "/public/resized/saas.png?jsx";
+import ImgSAASWide from "/public/resized/saas_wide.png?jsx";
 
 function randomInRange(min: number, max: number) {
   return Math.random() * (max - min) + min;
@@ -16,7 +16,7 @@ export default component$(() => {
       <p class="text-2xl text-white font-extrabold">Projects</p>
 
       <div class="grid gap-y-28">
-        <div class="max-w-4xl flex h-[50%] items-center flex-wrap mx-auto my-32 lg:my-0">
+        <div class="max-w-4xl flex items-center flex-wrap mx-auto">
           <div class="w-full lg:w-2/5">
             <ImgThisWebsite100
               alt="project_this_website"
@@ -64,7 +64,7 @@ export default component$(() => {
                 for this website{" "}
               </p>
               <p>
-                was fetched from CDN, mounted, and executed only when you do any
+                was fetched from the server, mounted, and executed only when you do any
                 interaction with the website.
               </p>
               <p>
@@ -137,7 +137,7 @@ export default component$(() => {
 
         <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
           <div class="w-full lg:w-2/5">
-            <ImgThisWebsite
+            <ImgSAAS
               alt="project_this_website"
               class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
             />
@@ -145,7 +145,7 @@ export default component$(() => {
           <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
-                <ImgThisWebsiteWide
+                <ImgSAASWide
                   alt="project_this_website_wide"
                   class=" rounded-xl w-auto h-auto"
                 />

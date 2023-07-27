@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import ImgThisWebsite from "/public/this_website.png?jsx";
-import ImgThisWebsiteWide from "/public/this_website_wide.png?jsx";
+import ImgThisWebsite from "/public/resized/this_website.png?jsx";
+import ImgThisWebsiteWide from "/public/resized/this_website_wide.png?jsx";
+import ImgSAAS from "/public/resized/saas.png?jsx";
+import ImgSAASWide from "/public/resized/saas_wide.png?jsx";
 
 export default component$(() => {
   return (
@@ -108,7 +110,7 @@ export default component$(() => {
                 Qwik
               </p>
               <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
-                Short description
+                Description
               </p>
               <p class="text-lg">
                 Did this site load fast?
@@ -150,7 +152,7 @@ export default component$(() => {
 
         <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
           <div class="w-full lg:w-2/5">
-            <ImgThisWebsite
+            <ImgSAAS
               alt="project_this_website"
               class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
             />
@@ -158,7 +160,7 @@ export default component$(() => {
           <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
-                <ImgThisWebsiteWide
+                <ImgSAASWide
                   alt="project_this_website_wide"
                   class=" rounded-xl w-auto h-auto"
                 />
@@ -227,15 +229,91 @@ export default component$(() => {
                 TailwindCSS
               </p>
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
-                Azure & Vercel
+                <svg
+                  class="h-4 fill-current pr-1"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <g fill="#0089D6">
+                    <path d="M7.47 12.412l3.348-.592.031-.007-1.722-2.049a291.474 291.474 0 01-1.723-2.058c0-.01 1.779-4.909 1.789-4.926a788.95 788.95 0 012.934 5.066l2.95 5.115.023.039-10.948-.001 3.317-.587zM.9 11.788c0-.003.811-1.412 1.803-3.131L4.507 5.53l2.102-1.764C7.765 2.797 8.714 2 8.717 2a.37.37 0 01-.033.085L6.4 6.981 4.16 11.789l-1.63.002c-.897.001-1.63 0-1.63-.003z" />
+                  </g>
+                </svg>{" "}
+                Azure &{" "}
+                <svg
+                  class="h-4 fill-current pr-1"
+                  viewBox="0 0 24 24"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Vercel icon</title>
+                  <path d="M24 22.525H0l12-21.05 12 21.05z" fill="black" />
+                </svg>
+                Vercel
               </p>
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 fill-current pr-1"
+                  viewBox="0 0 256 256"
+                  version="1.1"
+                  preserveAspectRatio="xMidYMid"
+                >
+                  <g>
+                    <path
+                      d="M256,128.044218 C255.976145,198.701382 198.701382,255.976145 128.044218,256 L128.044218,256 Z M128,0 C179.977309,0 224.718545,30.9806545 244.765091,75.4833455 L75.4833455,244.765091 C68.2193455,241.492945 61.3149091,237.562764 54.84736,233.050182 L159.8976,128 L128,128 L37.4903855,218.509382 C14.3269236,195.346036 0,163.346036 0,128 C0,57.30752 57.3075782,0 128,0 Z"
+                      fill="#000000"
+                    />
+                  </g>
+                </svg>
                 Planetscale
               </p>
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+                <svg
+                  class="h-4 fill-current pr-1"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>file_type_elastic</title>
+                  <path
+                    d="M12.761,13.89l6.644,3.027,6.7-5.874a7.017,7.017,0,0,0,.141-1.475,7.484,7.484,0,0,0-13.66-4.233L11.466,11.12Z"
+                    style="fill:#fed10a"
+                  />
+                  <path
+                    d="M5.886,20.919a7.262,7.262,0,0,0-.141,1.5,7.514,7.514,0,0,0,13.724,4.22l1.1-5.759L19.1,18.059l-6.67-3.04Z"
+                    style="fill:#24bbb1"
+                  />
+                  <path
+                    d="M5.848,9.426,10.4,10.5l1-5.169A3.594,3.594,0,0,0,5.848,9.426"
+                    style="fill:#ef5098"
+                  />
+                  <path
+                    d="M5.45,10.517a5.016,5.016,0,0,0-.218,9.453L11.62,14.2l-1.167-2.5Z"
+                    style="fill:#17a8e0"
+                  />
+                  <path
+                    d="M20.624,26.639a3.589,3.589,0,0,0,5.541-4.092l-4.541-1.065Z"
+                    style="fill:#93c83e"
+                  />
+                  <path
+                    d="M21.547,20.29l5,1.167A5.016,5.016,0,0,0,26.768,12l-6.541,5.733Z"
+                    style="fill:#0779a1"
+                  />
+                </svg>
                 Elastic Search
               </p>
               <p class="pt-0 text-gray-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start">
+                <svg
+                  class="h-4 fill-current pr-1"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="#AACBFB"
+                    fill-rule="evenodd"
+                    d="M1,1 L23,1 L23,23 L1,23 L1,1 Z M11.1196337,9.18908425 C11.1196337,8.58622711 11.6142857,8.35435897 12.4335531,8.35435897 C13.6083516,8.35435897 15.0923077,8.70989011 16.2671062,9.343663 L16.2671062,5.71106227 C14.9841026,5.20095238 13.7165568,5 12.4335531,5 C9.2956044,5 7.20879121,6.6385348 7.20879121,9.37457875 C7.20879121,13.6409524 13.0827839,12.9608059 13.0827839,14.800293 C13.0827839,15.5113553 12.4644689,15.7432234 11.5988278,15.7432234 C10.3158242,15.7432234 8.67728938,15.2176557 7.37882784,14.5065934 L7.37882784,18.1855678 C8.81641026,18.8038828 10.2694505,19.0666667 11.5988278,19.0666667 C14.8140659,19.0666667 17.0245421,17.4745055 17.0245421,14.7075458 C17.0090842,10.1010989 11.1196337,10.9203663 11.1196337,9.18908425 L11.1196337,9.18908425 Z"
+                  />
+                </svg>
                 Stripe
               </p>
 
@@ -243,7 +321,7 @@ export default component$(() => {
                 Short description
               </p>
               <p class="text-sm">
-                Did this site load fast?
+                Description
                 <br />I hope so, because I used{" "}
                 <a
                   class="font-bold no-underline text-gray-900"
