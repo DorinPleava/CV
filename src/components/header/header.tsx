@@ -25,34 +25,32 @@ export default component$(() => {
           </li>
         </ul>
       </div>
-      <div class="gs_reveal gs_reveal_press_v opacity-0 absolute grid w-[200px] -ml-20 mt-5 md:ml-7 md:mt-10 left-3/4 -translate-x-3/4 border items-center text-center border-white border-opacity-10 px-2 pb-3 rounded-full bg-[rgba(255,25,255,0.08)] justify-between text-slate-200">
+      <div class="gs_reveal gs_reveal_press_v opacity-0 absolute grid w-[200px] -ml-20 mt-5 md:ml-7 md:mt-10 left-3/4 -translate-x-3/4 border items-center text-center border-white justify-center border-opacity-10 px-2 pb-3 rounded-full bg-[rgba(255,25,255,0.08)] text-slate-200">
         <span class="justify-center">
           press <span class="font-black">&</span> hold
           <span class="text-3xl font-black animate-pulse text-purple-700">
             "v"
           </span>
-          <span>to view extra details</span>
+          <br />
+          <span>or toggle details</span>
         </span>
-        <div class="text-slate-200">
-          Or{" "}
-          <button
-            id="view_hidden"
-            class="font-black animate-pulse text-purple-700 hover:text-purple-500"
-          >
-            HERE
-          </button>{" "}
-          to view
-        </div>
-        <div class="text-slate-200">
-          And{" "}
-          <button
-            id="hide_hidden"
-            class="font-black animate-pulse text-purple-700 hover:text-purple-500"
-          >
-            HERE
-          </button>{" "}
-          to hide
-        </div>
+        <label
+          for="toggle_hidden"
+          class="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100 justify-center"
+        >
+          <span>Off</span>
+          <span class="relative">
+            <input
+              id="toggle_hidden"
+              type="checkbox"
+              class="hidden peer"
+              checked={false}
+            />
+            <div class="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
+            <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+          </span>
+          <span>On</span>
+        </label>
       </div>
     </header>
   );

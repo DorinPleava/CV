@@ -193,8 +193,7 @@ export default component$(() => {
 
   const revealHidden = $(async () => {
     hiddenLayerRef.value &&
-      (hiddenLayerRef.value.style.clipPath =
-        "circle(140% at 100% 100%)");
+      (hiddenLayerRef.value.style.clipPath = "circle(140% at 100% 100%)");
 
     hiddenLayerRef.value && (hiddenLayerRef.value.style.visibility = "visible");
     hiddenLayerRef.value &&
@@ -205,6 +204,12 @@ export default component$(() => {
     hiddenLayerRef.value &&
       (hiddenLayerRef.value.style.clipPath =
         "circle(0px at var(--x) var(--y))");
+  });
+
+  const toggleHidden = $(async (e: MouseEvent) => {
+    if (e.target instanceof HTMLInputElement) {
+      e.target.checked ? revealHidden() : hideHidden();
+    }
   });
 
   useVisibleTask$(() => {
@@ -219,6 +224,10 @@ export default component$(() => {
     document
       .getElementById("hide_hidden")
       ?.addEventListener("click", hideHidden);
+
+    document
+      .getElementById("toggle_hidden")
+      ?.addEventListener("click", toggleHidden);
 
     (function () {
       if (typeof window !== "undefined") {
@@ -248,6 +257,7 @@ export default component$(() => {
       document.removeEventListener("keyup", disableCodeViewMouse);
       document.removeEventListener("click", revealHidden);
       document.removeEventListener("click", hideHidden);
+      document.removeEventListener("click", toggleHidden);
     };
   });
 
