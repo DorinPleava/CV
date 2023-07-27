@@ -13,17 +13,17 @@ export default component$(() => {
       class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48"
       id="projects"
     >
-      <p class="text-2xl text-white font-extrabold">Projects</p>
+      <p class="text-5xl pb-7 text-white font-extrabold">Projects</p>
 
       <div class="grid gap-y-28">
-        <div class="max-w-4xl flex items-center flex-wrap mx-auto">
-          <div class="w-full lg:w-2/5">
+        <div class="max-w-4xl rounded-2xl flex items-center flex-wrap mx-auto bg-gradient-to-r from-pink-800 via-pink-900 to-purple-900 opacity-90">
+          <div class="w-full lg:w-2/5 p-2">
             <ImgThisWebsite100
               alt="project_this_website"
               class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
             />
           </div>
-          <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-4 lg:mx-0">
+          <div class="w-full lg:w-3/5 rounded-2xl shadow-2xl bg-white opacity-75 mx-4 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
                 <ImgThisWebsite100
@@ -135,14 +135,14 @@ export default component$(() => {
           </div>
         </div>
 
-        <div class="max-w-4xl flex items-center flex-wrap mx-auto my-32 lg:my-0">
-          <div class="w-full lg:w-2/5">
+        <div class="max-w-4xl rounded-2xl flex items-center flex-wrap mx-auto bg-gradient-to-r from-pink-800 via-pink-900 to-purple-900 opacity-90">
+          <div class="w-full lg:w-2/5 p-2">
             <ImgSAAS
               alt="project_this_website"
               class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
             />
           </div>
-          <div class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+          <div class="w-full lg:w-3/5 rounded-2xl shadow-2xl bg-white opacity-75 mx-4 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden shadow-xl mx-auto bg-cover bg-center">
                 <ImgSAASWide
