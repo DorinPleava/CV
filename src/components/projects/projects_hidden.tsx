@@ -13,7 +13,10 @@ export default component$(() => {
       class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48"
       id="projects"
     >
-      <p class="text-5xl pb-7 text-white font-extrabold">Projects</p>
+      <div class="flex text-5xl pb-7 text-white font-extrabold">
+        <p>Personal projects</p>
+        <p class="text-sm">(that I'm proud of)</p>
+      </div>
 
       <div class="grid gap-y-28">
         <div class="max-w-4xl rounded-2xl flex items-center flex-wrap mx-auto bg-gradient-to-r from-pink-800 via-pink-900 to-purple-900 opacity-90">
@@ -157,7 +160,7 @@ export default component$(() => {
                 Implementation details
               </p>
 
-              <ul class="list-disc">
+              <ul class="list-disc my-5">
                 <li class="ml-4">
                   Presentation website, hosted on Vercel using Next.js,
                   TypeScript, TailwindCSS, TRPC, Prisma and React.
@@ -173,6 +176,9 @@ export default component$(() => {
                 <li class="ml-4">
                   Leveraged Planetscale for the database management, ensuring
                   scalability and high availability.
+                </li>
+                <li class="ml-4">
+                  Google sign-in for easy authentication and authorization.
                 </li>
                 <li class="ml-4">
                   GitHub Actions for seamless CI/CD, and cron job
