@@ -7,10 +7,10 @@ import ImgSAASWide from "/public/resized/saas_wide.png?jsx";
 export default component$(() => {
   return (
     <div
-      class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48"
+      class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-16 md:pl-[10%] md:pr-[10%] md:pt-24"
       id="projects"
     >
-      <p class="text-5xl pb-7 text-white font-extrabold">Personal projects</p>
+      <p class="text-5xl pb-7 text-white font-extrabold bg-gradient-to-r from-fuchsia-800 via-violet-600 to-fuchsia-700 bg-clip-text text-transparent">Personal projects</p>
 
       <div class="grid gap-y-28">
         <div class="max-w-4xl rounded-2xl flex items-center flex-wrap mx-auto bg-gradient-to-r from-pink-800 via-pink-900 to-purple-900 opacity-80">

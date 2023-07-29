@@ -6,6 +6,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import About from "~/components/about/about";
 import About_hidden from "~/components/about/about_hidden";
+import Experience from "~/components/experience/experience";
+import Experience_hidden from "~/components/experience/experience_hidden";
 import Footer from "~/components/footer/footer";
 import Header from "~/components/header/header";
 import Projects from "~/components/projects/projects";
@@ -54,7 +56,8 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
   let x = 0,
     y = direction * 100,
     duration = 2,
-    delay = 0;
+    delay = 0,
+    opacity = 1;
 
   if (elem.classList.contains("gs_reveal_fromLeft")) {
     x = -1000;
@@ -104,6 +107,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     y = 0;
     delay = 0 * baseDelayAndDuration;
     duration = 4 * baseDelayAndDuration;
+    opacity = 0.75;
   } else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
     x = -500;
     y = 0;
@@ -154,7 +158,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
       duration,
       x: 0,
       y: 0,
-      autoAlpha: 1,
+      autoAlpha: opacity,
       ease: "expo",
       overwrite: "auto",
       delay: delay,
@@ -273,7 +277,7 @@ export default component$(() => {
           <Projects />
         </section>
         <section id="experience">
-          <About />
+          <Experience />
         </section>
       </section>
       <section
@@ -288,7 +292,7 @@ export default component$(() => {
           <Projects_hidden />
         </section>
         <section id="experience_hidden">
-          <About_hidden />
+          <Experience_hidden />
         </section>
       </section>
 
