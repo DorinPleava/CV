@@ -60,10 +60,10 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     opacity = 1;
 
   if (elem.classList.contains("gs_reveal_fromLeft")) {
-    x = -1000;
+    x = -100;
     y = 0;
   } else if (elem.classList.contains("gs_reveal_fromRight")) {
-    x = 1000;
+    x = 100;
     y = 0;
   } else if (elem.classList.contains("gs_reveal_fromTop")) {
     x = -100;
@@ -73,7 +73,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     y = 0;
     duration = 5;
   } else if (elem.classList.contains("gs_reveal_about_more_text")) {
-    x = 400;
+    x = 100;
     y = 0;
     delay = 4 * baseDelayAndDuration;
     duration = 3 * baseDelayAndDuration;
@@ -99,7 +99,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     duration = 5 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_contact_me")) {
     x = 0;
-    y = 500;
+    y = 100;
     delay = 5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_press_v")) {
@@ -107,44 +107,44 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
     y = 0;
     delay = 0 * baseDelayAndDuration;
     duration = 4 * baseDelayAndDuration;
-    opacity = 0.75;
+    opacity = 0.95;
   } else if (elem.classList.value.includes("gs_reveal_about_big_text")) {
-    x = -500;
+    x = -100;
     y = 0;
     delay = 4.5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_1")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_2")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.1 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_3")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.2 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_4")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.3 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_5")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.4 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_6")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.5 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
   } else if (elem.classList.value.includes("gs_reveal_about_skill_7")) {
-    x = 500;
+    x = 100;
     y = 0;
     delay = 5.6 * baseDelayAndDuration;
     duration = 2 * baseDelayAndDuration;
