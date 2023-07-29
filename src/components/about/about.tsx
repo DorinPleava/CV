@@ -21,7 +21,7 @@ export default component$(() => {
           <p class="text-white font-extrabold gs_reveal gs_reveal_about_name opacity-0">
             I'm
           </p>
-          <p class="text-white text-6xl gs_reveal gs_reveal_about_name opacity-0 ml-2 font-black bg-gradient-to-r from-fuchsia-800 via-violet-600 to-fuchsia-700 bg-clip-text text-transparent">
+          <p class="text-6xl gs_reveal gs_reveal_about_name opacity-0 ml-2 font-black bg-gradient-to-r from-fuchsia-800 via-violet-600 to-fuchsia-700 bg-clip-text text-transparent">
             Dorin Pleava
           </p>
         </div>
