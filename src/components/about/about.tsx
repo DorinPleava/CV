@@ -36,7 +36,7 @@ export default component$(() => {
         I thrive on taking up captivating projects in diverse technologies and
         programming languages
       </p>
-      <ul class="list-disc flex-col text-lg md:text-2xl pt-4 text-white font-extrabold hidden md:flex gs_reveal gs_reveal_about_big_text opacity-0 ">
+      <ul class="list-disc flex-col text-lg md:text-2xl pt-4 text-white font-extrabold hidden md:flex gs_reveal gs_reveal_about_big_text opacity-0">
         Skilled in
         <li class="md:ml-8 ml-4 gs_reveal gs_reveal_about_skill_1 opacity-0">
           Web Apps
