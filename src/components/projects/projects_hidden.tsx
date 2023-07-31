@@ -202,7 +202,7 @@ export default component$(() => {
           </div>
         </div>
       </div>
-      <div class="absolute bottom-[5%] left-1/2 z-10 transform -translate-x-1/2 translate-y-1/2 bg-transparent text-center">
+      <div class="self-center my-3 bg-transparent text-center">
         <h1 class="text-slate-200 font-extrabold opacity-50">Experience</h1>
         <button
           class="border-2 text-slate-400 rounded-full w-12 h-12 animate-bounce mt-4 opacity-50"

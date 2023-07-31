@@ -1,17 +1,21 @@
 import { component$ } from "@builder.io/qwik";
-import { useServerTimeLoader } from "~/routes/layout";
 
 export default component$(() => {
-  const serverTime = useServerTimeLoader();
-
   return (
     <footer>
-      <div class="container text-white">
-        <a href="https://www.builder.io/" target="_blank" class="">
-          <span>Made with ♡ by Builder.io</span>
-          <span class="">|</span>
-          <span>{serverTime.value.date}</span>
-        </a>
+      <div class="container text-white p-10 text-center">
+        <button
+          onClick$={() => {
+            const projects = document.getElementById("contact-me");
+            projects?.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center",
+            });
+          }}
+        >
+          <hi>Contact me</hi>
+        </button>
       </div>
     </footer>
   );

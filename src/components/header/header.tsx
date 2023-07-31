@@ -27,7 +27,7 @@ export default component$(() => {
           </ul>
         </div>
       </header>
-      <div class="gs_reveal gs_reveal_press_v opacity-1 fixed grid w-[200px] right-[7%] top-[7%] -translate-x-3/4 border items-center text-center border-white justify-center border-opacity-10 rounded-full bg-[rgba(255,25,255,0.08)] text-slate-200 z-50 backdrop-filter backdrop-blur-lg ">
+      <div class="gs_reveal gs_reveal_press_v opacity-0 fixed grid w-[200px] right-[7%] top-[7%] -translate-x-3/4 border items-center text-center border-white justify-center border-opacity-10 rounded-full bg-[rgba(255,25,255,0.08)] text-slate-200 z-50 backdrop-filter backdrop-blur-lg ">
         <span class="justify-center hidden md:flex items-center">
           press <span class="mx-1 font-black">&</span> hold
           <span class="text-3xl font-black animate-pulse text-purple-700">

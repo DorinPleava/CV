@@ -6,7 +6,6 @@ import GmailLogo from "/public/Gmail_icon_(2020).svg.png?jsx";
 
 export default component$(() => {
   return (
-    // height: calc(var(--vh, 1vh) * 100);
     <div
       class="lg:max-w-[70%] max-w-full relative flex-col flex flex-nowrap pl-[8%] pb-[10%] pr-[8%] pt-32 md:pl-[10%] md:pr-[10%] md:pt-48 h-[calc(var(--vh,_1vh)_*_100)]"
       id="about"
@@ -88,7 +87,7 @@ export default component$(() => {
         </ul>
       </div>
 
-      <div class="absolute bottom-[5%] left-1/2 z-10 transform -translate-x-1/2 translate-y-1/2 bg-transparent text-center">
+      <div class="self-center my-3 bg-transparent text-center">
         <h1 class="text-slate-200 font-extrabold opacity-50">Projects</h1>
         <button
           class="border-2 text-slate-400 rounded-full w-12 h-12 animate-bounce mt-4 opacity-50"

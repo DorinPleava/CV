@@ -60,10 +60,10 @@ export default component$(() => {
           CI/CD (GitLab and GitHub Actions)
         </li>
       </ul>
-      <div class="flex items-center justify-between pt-10 relative gs_reveal gs_reveal_about_contact_me opacity-0">
+      <div id="contact-me" class="flex items-center justify-between pt-10 relative gs_reveal gs_reveal_about_contact_me opacity-0">
         <ul class="flex gap-8 border border-white border-opacity-10 px-5 py-2 rounded-full bg-[rgba(255,25,255,0.08)] justify-between items-center w-full">
           <li class="text-slate-200 hover:text-slate-400 text-sm md:text-2xl font-extrabold">
-            <a href="#front_layer">Contact me:</a>
+            <p>Contact me:</p>
           </li>
           <li class="flex gap-3 text-slate-200  text-2xl font-extrabold  items-center justify-between ">
             <a
@@ -88,13 +88,11 @@ export default component$(() => {
         </ul>
       </div>
 
-      <div class="absolute bottom-[5%] left-1/2 z-10 transform -translate-x-1/2 translate-y-1/2 bg-transparent text-center">
+      <div class="self-center my-3 bg-transparent text-center gs_reveal gs_reveal_press_v">
         <h1 class="text-slate-200 font-extrabold opacity-50">Projects</h1>
         <button
           class="border-2 text-slate-400 rounded-full w-12 h-12 animate-bounce mt-4 opacity-50"
-          aria-label="Scroll down"
           onClick$={() => {
-            console.log("clicked");
             window.scrollTo({
               top: window.innerHeight,
               behavior: "smooth",

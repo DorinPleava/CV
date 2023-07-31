@@ -105,7 +105,7 @@ function animateFrom(elem: any, direction: any, baseDelayAndDuration: any) {
   } else if (elem.classList.value.includes("gs_reveal_press_v")) {
     x = 0;
     y = 0;
-    delay = 0 * baseDelayAndDuration;
+    delay = 5 * baseDelayAndDuration;
     duration = 4 * baseDelayAndDuration;
     opacity = 0.95;
   } else if (elem.classList.value.includes("gs_reveal_about_big_text")) {

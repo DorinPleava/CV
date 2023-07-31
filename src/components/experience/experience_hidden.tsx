@@ -6,9 +6,10 @@ export default component$(() => {
       class="max-w-full relative flex-col flex flex-nowrap pl-[4%] pb-[10%] pr-[4%] pt-16 md:pl-[10%] md:pr-[10%] md:pt-24"
       id="projects"
     >
-      <p class="text-5xl pb-7 text-white font-extrabold bg-gradient-to-r from-fuchsia-800 via-violet-600 to-fuchsia-700 bg-clip-text text-transparent">
-        Work Experience
-      </p>
+      <div class="flex text-5xl pb-7 text-white font-extrabold bg-gradient-to-r from-fuchsia-800 via-violet-600 to-fuchsia-700 bg-clip-text text-transparent">
+        <p>Work Experience</p>
+        <p class="text-sm">(already added all details)</p>
+      </div>
 
       <ol class="relative border-l border-gray-200 dark:border-gray-700">
         <ul class="mb-10 ml-4 ">
