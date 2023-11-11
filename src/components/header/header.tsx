@@ -17,12 +17,26 @@ export default component$(() => {
               <a href="#experience">Experience</a>
             </li>
             <li class="text-slate-200 hover:text-slate-400">
-              <a
-                href="https://qwik.builder.io/tutorial/welcome/overview/"
-                target="_blank"
+              <button
+                onClick$={async () => {
+                  function downloadCV() {
+                    fetch("CV.pdf").then((response) => {
+                      response.blob().then((blob) => {
+                        const fileURL = window.URL.createObjectURL(blob);
+
+                        const alink = document.createElement("a");
+                        alink.href = fileURL;
+                        alink.download = "Dorin Pleava CV.pdf";
+                        alink.click();
+                      });
+                    });
+                  }
+
+                  await downloadCV();
+                }}
               >
                 CV
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -37,23 +51,22 @@ export default component$(() => {
           <span class="hidden md:grid">or</span>
         </span>
         <div class="flex">
-
-        <span>toggle details</span>
-        <label
-          for="toggle_hidden"
-          class="ml-2 inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100 justify-center"
-        >
-          <span class="relative">
-            <input
-              id="toggle_hidden"
-              type="checkbox"
-              class="hidden peer"
-              checked={false}
-            />
-            <div class="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-            <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
-          </span>
-        </label>
+          <span>toggle details</span>
+          <label
+            for="toggle_hidden"
+            class="ml-2 inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100 justify-center"
+          >
+            <span class="relative">
+              <input
+                id="toggle_hidden"
+                type="checkbox"
+                class="hidden peer"
+                checked={false}
+              />
+              <div class="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
+              <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+            </span>
+          </label>
         </div>
       </div>
     </>
