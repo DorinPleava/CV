@@ -1,123 +1,72 @@
-# Qwik City App ⚡️
+# My CV Showcase Project
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+Welcome to the repository for my CV showcase. This project is designed to present my Curriculum Vitae (CV) in a modern and interactive way using Qwik and TypeScript.
 
----
+Created this project to improve my skills in Qwik and Typescript, but also to learn new technologies like GSAP, Vite, and a new web framework.
 
-## Project Structure
+## Table of Contents
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
-Inside your project, you'll see the following directory structure:
+## Introduction
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+This project serves as a dynamic and visually appealing way to showcase my professional experience, skills, and achievements. It leverages Qwik, a JavaScript library for building efficient web applications.
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+## Features
 
-- `src/components`: Recommended directory for components.
+- **Responsive Design:** The CV is designed to be accessible and visually appealing on various devices, including desktops, tablets, and smartphones.
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+- **Interactive Sections:** Each section of the CV is interactive, allowing users to view my experience, skills, and projects with ease.
 
-## Add Integrations and deployment
+- **Qwik Integration:** I used Qwik to enhance the performance of the application, ensuring a fast and seamless user experience. Also used it to learn a new web framework.
 
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
+## Setup
 
-```shell
-npm run qwik add # or `yarn qwik add`
-```
+To set up the project locally, follow these steps:
 
-## Development
+1. Clone the repository:
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+    ```bash
+    git clone https://github.com/DorinPleava/CV.git
+    ```
 
-```shell
-npm start # or `yarn start`
-```
+2. Navigate to the project directory:
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+    ```bash
+    cd CV
+    ```
 
-## Preview
+3. Install dependencies:
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+    ```bash
+    npm install
+    ```
 
-```shell
-npm run preview # or `yarn preview`
-```
+## Usage
 
-## Production
+After completing the setup, you can run the application locally:
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
+```bash
+npm start
 ```
 
-## Create your Static Web App on Azure
+This command will start a development server, and you can access the CV project in your browser at http://localhost:3000.
 
-1. Follow [this](https://learn.microsoft.com/en-us/azure/static-web-apps/overview) guide to create a Static Web App. This guide will also detail how to generate a github action or Azure Pipeline (see "Quickstarts" section)
+## Technologies
+The project is built with the following technologies:
 
-2. If you're using github actions, make sure to add skip_api_build with true value.
+- Qwik: A JavaScript library for building efficient web applications. The fastest front-end framework right now(2023)
 
-```yml
-app_location: "/"
-api_location: "azure-functions"
-output_location: "dist"
-skip_api_build: true # <--- add this line
-###### End of Repository/Build Configurations ######
-```
+- Typescript: The primary programming language used for the project.
 
-## Vercel Edge
+- HTML/CSS: Standard web technologies for structuring and styling the content.
 
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
+- GSAP: for advanced animations.
 
-## Installation
-
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
-```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
-```
-
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
-
-## Production build
-
-To build the application for production, use the `build` command, this command will automatically run `npm run build.server` and `npm run build.client`:
-
-```shell
-npm run build
-```
-
-[Read the full guide here](https://github.com/BuilderIO/qwik/blob/main/starters/adapters/vercel-edge/README.md)
-
-## Dev deploy
-
-To deploy the application for development:
-
-```shell
-npm run deploy
-```
-
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
-
-## Production deploy
-
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
-
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+- Vite: for fast development.
